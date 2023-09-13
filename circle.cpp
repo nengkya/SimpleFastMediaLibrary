@@ -2,6 +2,9 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(333, 333), "HaGa IT Solution");
+    while (window.isOpen()) {
+	sf::Event event;
+	    
 
-
+    }
 }
