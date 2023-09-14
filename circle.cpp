@@ -2,6 +2,8 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(333, 333), "HaGa IT Solution");
+    sf::RenderWindow indow(sf::VideoMode(333, 333), "HaGa IT Solution");
+ 
     sf::CircleShape circle(100.f);
     circle.setFillColor(sf::Color::Cyan);
 
@@ -13,7 +15,10 @@ int main() {
 		window.close();
 	    }
 	
-	/* clear maximize strech */
+	/*
+	clear maximize strech
+	window.clear(sf::Color::Black);
+	*/
 	window.clear();
 	
 	/* draw to buffer, not screen */
