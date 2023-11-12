@@ -10,4 +10,5 @@ void 	setPosition (float x, float y)
 /* set the local origin of the object */  
 void 	setOrigin (float x, float y)  
 
-sf::Texture stores pixels that can be drawn, with a sprite for example.
+sf::Texture stores pixels that can be drawn, with a sprite for example.  
+sf::sprite draw texture  
