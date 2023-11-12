@@ -5,7 +5,9 @@ int main(){
 
     /* creating our shape */
     sf::RectangleShape rectangle(sf::Vector2f(128.0f, 128.0f));
-
+    rectangle.setFillColor(sf::Color::Blue);
+    rectangle.setPosition(320, 240);
+    rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 
     while (window.isOpen()){
 	sf::Event event;    
@@ -15,7 +17,10 @@ int main(){
 	    if (event.type == sf::Event::Closed){
 		window.close();	
 	    }
-	    window.display();
 	}
+
+	window.draw(rectangle);
+	window.display();
     }
+
 }
