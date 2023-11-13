@@ -8,12 +8,11 @@ int main(){
     mushroomTexture.loadFromFile("mushroom.jpeg");
 
     /* sf::sprite draw texture*/
-    sf::Sprite mushroom(mushroomTexture);
+    sf::Sprite mushroomSprite(mushroomTexture);
+    sf::Vector2u mushroomSize = mushroomTexture.getSize();
+    mushroomSprite.setOrigin(mushroomSize.x / 2, mushroomSize.y / 2);
+    sf::Vector2f mushroomIncrement(0.4f, 0.4);
 
-    /*
-    rectangle.setPosition(320, 240);
-    rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
-    */
     while (window.isOpen()){
 	sf::Event event;    
 
@@ -24,7 +23,7 @@ int main(){
 	    }
 	}
 
-	window.draw(mushroom);
+	window.draw(mushroomSprite);
 	window.display();
     }
 
