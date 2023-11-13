@@ -23,6 +23,33 @@ int main(){
 	    }
 	}
 
+	if (
+	    (mushroomSprite.getPosition().x + (mushroomSize.x / 2) > window.getSize().x &&
+	     mushroomIncrement.x > 0)
+	    ||
+	    (mushroomSprite.getPosition().x - (mushroomSize.x / 2) < 0 && mushroomIncrement.x < 0)
+	   ){
+	    /* reverse x axist direction */
+	    mushroomIncrement.x = - mushroomIncrement.x;
+	}
+
+	if (
+	    (mushroomSprite.getPosition().y + (mushroomSize.y / 2) > window.getSize().y &&
+	    mushroomIncrement.y > 0)
+	    ||
+	    (mushroomSprite.getPosition().y - (mushroomSize.y / 2) < 0 && mushroomIncrement.y < 0)
+	   )
+	   {
+	    mushroomIncrement.y = - mushroomIncrement.y;
+	}
+
+	mushroomSprite.setPosition(mushroomSprite.getPosition() + mushroomIncrement);
+
+	/*
+	 dark grey
+	 sf::Color(R, G, B, A);
+	*/
+	window.clear(sf::Color(16, 16, 16, 255));
 	window.draw(mushroomSprite);
 	window.display();
     }
