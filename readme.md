@@ -12,3 +12,5 @@ void 	setOrigin (float x, float y)
 
 sf::Texture stores pixels that can be drawn, with a sprite for example.  
 sf::sprite draw texture  
+
+~ (tilde) It's the destructor, it destroys the instance, frees up memory, etc. etc.
